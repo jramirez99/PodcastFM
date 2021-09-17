@@ -1,0 +1,27 @@
+.beneficios {
+    background-color: $primario;
+
+    .beneficios-grid {
+        @include tablet {
+            @include grid( 5, 4rem);
+            align-items: center;
+        }
+
+        .contenido {
+            grid-column: 1 / 4;
+
+            h2 {
+                @include headingBorder( $secundario, $blanco )
+            }
+        }
+        .imagen {
+            grid-column: 4 / 6;
+            transition-property: transform;
+            transition-duration: .3s;
+
+            &:hover {
+                transform: rotate(8deg) scale(1.1) ;
+            }
+        }
+    }
+}

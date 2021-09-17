@@ -1,0 +1,86 @@
+.planes {
+    background-color: $secundario;
+
+    h2 {
+        @include headingBorder( $blanco, $primario );
+    }
+
+    .descripcion {
+        color: $blanco;
+    }
+}
+
+.nuestros-planes {
+    @include flexColumn;
+
+    @include tablet {
+        flex-direction: row;
+        max-width: 80rem;
+        margin: 10rem auto 0 auto;
+    }
+
+    .plan {
+        flex-grow: 1;
+        background-color: $blanco;
+        padding: 16rem 4rem 4rem 4rem;
+        background-repeat: no-repeat;
+        background-position: 50% 2rem;
+        background-size: 15rem;
+
+        @include tablet {
+            transition-property: transform;
+            transition-duration: .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &.inicio {
+            background-image: url(../../img/icono_inicio.svg);
+        }
+        &.negocio {
+            background-image: url(../../img/icono_negocio.svg);
+            background-color: $primario;
+        }
+        &.pro {
+            background-image: url(../../img/icono_pro.svg);
+        }
+
+        .precio {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &.negocio {
+            order: -1;
+
+            @include tablet {
+                order: unset;
+                margin: -5rem 0;
+                border-radius: 2rem;
+                background-position: 50% 7rem;
+                padding-top: 21rem;
+                z-index: 100;
+            }
+            .boton-plan {
+                border: 1px solid $blanco;
+            }
+        }
+
+        h3 {
+            margin-top: 4rem;
+        }
+
+        li {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .boton-plan {
+            @include boton( $primario, $secundario );
+        }
+    }
+}

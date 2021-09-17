@@ -1,0 +1,45 @@
+.footer {
+    background-color: $secundario;
+    color: $blanco;
+
+    .footer-grid {
+        padding: 5rem 0;
+
+        @include tablet {
+            @include grid( 4, 4rem );
+            align-items: flex-start;
+        }
+    }
+
+    .logo {
+        max-width: 50rem;
+        margin: 0 auto;
+        margin-top: -3rem;
+    }
+
+    .copyright {
+        color: $blanco;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        border-top: 1px solid $primario;
+        margin: 0 auto;
+    }
+}
+.footer-widget {
+    margin-top: 5rem;
+
+    h3 {
+        color: $primario;
+        text-align: left;
+    }
+
+    nav {
+        @include flexColumn;
+
+        a {
+            color: $blanco;
+            line-height: 2;
+        }
+    }
+}

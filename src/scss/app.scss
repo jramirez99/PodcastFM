@@ -1,0 +1,20 @@
+// directorio base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/normalize';
+@import 'base/utilidades';
+
+
+
+// directorio inicio
+@import 'inicio/header';
+@import 'inicio/creaTuPodcast';
+@import 'inicio/beneficios';
+@import 'inicio/estadisticas';
+@import 'inicio/planes';
+@import 'inicio/testimoniales';
+@import 'inicio/footer';
+
+// auth
+@import 'auth/formAuth';
