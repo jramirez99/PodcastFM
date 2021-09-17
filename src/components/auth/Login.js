@@ -5,7 +5,6 @@ export const Login = () => {
     return (
         <div className="login">
             <div className="contenedor">
-
                 <form className="formulario-auth">
                     <h2> Crear Cuenta </h2>
 
